@@ -49,6 +49,17 @@ a {
     flex: 1;
 }
 
+/* Mobile hero3 image */
+#mobile-hero {
+    display: block;
+}
+
+#mobile-hero img {
+    width: 100%;
+    height: auto;          /* keeps proportions */
+    object-fit: cover;     /* makes it look uniform */
+}
+
 /* Hide tab-desk items */
 .tab-desk,
 #hero {
@@ -153,6 +164,18 @@ img {
     display: block;
 }
 
+#hero,
+#mobile-hero {
+    max-width: 1200px;   /* choose the limit */
+    margin: 0 auto;      /* keeps hero centered */
+}
+
+#hero img,
+#mobile-hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 /* Main */
 .content-container {
@@ -241,7 +264,7 @@ footer a {
         padding: 20px;
     }
 
-        #hero {
+    #hero {
         display: block;
         width: 100%;
     }
