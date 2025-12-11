@@ -215,6 +215,11 @@ main h1 {
     margin-bottom: 15px;
 }
 
+.download {
+    color: #005b96;
+    text-decoration: underline;
+}
+
 /* Each section */
 .content-section {
     background-color: #fff;
