@@ -1,0 +1,340 @@
+/* CSS Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body, html {
+    font-family: "Roboto Serif", serif;
+    background-color: #b3cde0;
+    color: #011f4b;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mobile First Style Rules */
+
+.single-column {
+    display: block;
+    text-align: center;
+}
+
+.single-column .main-content {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.two-columns .content-section {
+    flex: 1;
+}
+
+/* Hide tab-desk items */
+.tab-desk,
+#hero {
+    display: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #011f4b;
+    padding: 2%;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Mobile Nav w/ hero background */
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;                   
+    background-image: url('../images/hero2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+/* Hamburger Icon */
+.mobile-nav a.menu-icon {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Optional: menu links (hidden by default) */
+#menu-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em;
+    text-decoration: none;
+    padding: 1%;
+    display: block;
+}
+
+/* Mobile nav link tap/press effect */
+.mobile-nav a:active,
+.mobile-nav a:focus {
+    background-color: #fff;
+    color: #011f4b;
+    transform: scale(0.95);
+    transition: all 0.2s ease;
+}
+
+/* Add hover-like feedback for devices that support it */
+.mobile-nav a:hover {
+    background-color: rgba(255,255,255,0.7);
+    color: #011f4b;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav #menu-links {
+    display: none;
+}
+
+
+/* When the nav menu is "open" */
+.mobile-nav #menu-links.open {
+    display: block;
+}
+
+
+/* Main */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content p {
+    font-family: "Roboto Serif", serif;
+    color: #011f4b;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #011f4b;
+    padding: 1%;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-blurb h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Each section */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    padding: 20px 0;
+}
+
+footer h2 {
+    color: #011f4b;
+}
+
+footer a {
+    color: #005b96;
+    text-decoration: none;
+}
+
+.contact-icon, #contact {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* keeps aspect ratio */
+    display: inline-block;
+    margin: 5px;
+}
+
+
+/* Tablet & Desktop - 768px+ */
+@media screen and (min-width: 768px), print {
+
+    .single-column .main-content {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .two-columns {
+        flex-direction: row;
+    }
+
+    .two-columns .content-section {
+        padding: 20px;
+    }
+
+        #hero {
+        display: block;
+        width: 100%;
+    }
+
+    #hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Show desktop-only items */
+    .tab-desk {
+        display: block;
+    }
+    
+    /* Hide Mobile Nav */
+    .mobile-nav {
+        display: none;
+    }
+
+    /* Desktop Header */
+    header {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        padding: 2%;
+    }
+
+    /* Desktop Nav */
+    nav.tab-desk {
+        background-color: #011f4b;
+    }
+
+    nav.tab-desk ul {
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav.tab-desk li {
+        display: inline-block;
+        border-right: 1px solid #e5e9fc;
+        font-size: 1.25em;
+        padding: 0 10px;
+    }
+
+    nav.tab-desk li:last-child {
+        border-right: none;
+    }
+
+    nav.tab-desk a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    /* Desktop Main */
+    .content-container {
+        flex-direction: row;
+    }
+
+    .content-section {
+        flex: 1;
+    }
+
+    .education-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .education-blurb {
+        flex: 2;
+    }
+
+    aside.merits {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .education-blurb h1 {
+        width: 100%;
+    }
+
+
+    /* Hover effect for desktop nav links */
+    nav.tab-desk a:hover {
+        transform: scale(1.1);
+        background-color: #b3cde0;
+        color: #011f4b;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+}

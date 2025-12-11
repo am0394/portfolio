@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+<!-- Header / logo -->
+    <header>
+        <img class="logo" src="images/logo.png" alt="Logo">
+        <h1>Andrew S. Miller - Full Stack Web Developer</h1>
+    </header>
+
+<!-- Hero Image (hidden on mobile) -->
+    <div id="hero" class="tab-desk">
+        <img src="images/hero2.jpg" alt="Hero Band Image">
+    </div>
+
+<!-- Mobile Nav -->
+    <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="education.html">Education</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
+    </nav>
+
+<!-- Desktop Nav -->
+    <nav class="tab-desk">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="education.html">Education</a></li>
+        </ul>
+    </nav>
+
+<!-- Main -->
+    <main class="single-column">
+        <div id="hero" class="tab-desk">
+            <img src="images/hero3.jpg" alt="computer code">
+        </div>
+
+        <div class="main-content">
+            <h1>Welcome!</h1>
+            <p>My name is Andy and I am eager to get to know you. Please, explore the site, get to know me, and let's work together!</p>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Contact Me!</h2>
+
+        <a id="contact" href="tel:845-707-5193"><img src="images/blue3dphone.png" alt="Call Me!"></a>
+        <a id="contact" href="sms:+1845-707-5193?body=Hello%20there!"><img src="images/blue3dsms.png" alt="Text Me"></a>
+        <a id="contact" href="mailto:amiller3040@gmail.com"><img src="images/blue3dgmail.png" alt="Gmail"></a>
+        <a id="contact" href="mailto:amiller3040@gmail.com"><img src="images/3dyahoomail.jpg" alt="Yahoo!"></a>
+        <a id="contact" href="https://www.facebook.com/andy.miller.573546"  target="_blank"><img src="images/blue3dfb.png" alt="Facebook"></a>
+
+        <ul>
+            <a href="tel:8457075193">Phone: 845-707-5193</a>
+            <a href="mailto:amiller3040@gmail.com">Gmail: Amiller3040@gmail.com</a>
+            <a href="mailto:sillyputty88@yahoo.com">Yahoo: Sillyputty88@yahoo.com</a>
+        </ul>
+
+
+
+        <p>&copy; Copyright 2025. All Rights Reserved.</p>
+    </footer>
+<script>
+function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('open'); // adds/removes "open" class
+}
+</script>
+</body>
+
+</html>
