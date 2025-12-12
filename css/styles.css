@@ -244,7 +244,7 @@ footer a {
     text-decoration: none;
 }
 
-.contact-icon, #contact {
+.contact-icon, .contact {
     width: 40px;
     height: 40px;
     object-fit: contain; /* keeps aspect ratio */
